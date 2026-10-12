@@ -39,6 +39,14 @@
 
 
 
+  <style>
+    /* figure wider than the 45rem text column; fills the white area on large screens */
+    .wide-figure { width: 100%; height: auto; margin: 0.5rem 0 1.5rem; border-radius: 0; }
+    @media (min-width: 51rem) {
+      .content .wide-figure {
+        width: calc(100vw - 37rem); max-width: 75rem; min-width: 100%; }
+    }
+  </style>
 </head>
 
 
@@ -387,6 +395,12 @@
       empirical studies using machine learning and statistical modelling:</p>
       <ul>
         <li>Characterizing brain&ndash;cardiovascular aging using multiorgan imaging and machine learning</li>
+      </ul>
+      <a href="img/brain_heart_animation_green.svg" target="_blank" title="Click to view full size">
+        <img class="wide-figure" src="img/brain_heart_animation_green.svg"
+             alt="Animated overview of brain and cardiovascular imaging features used to characterize brain&ndash;cardiovascular aging">
+      </a>
+      <ul>
         <li>Cardiovascular imaging reveals pathways linking cardiovascular risk factors to brain aging and cognition</li>
         <li>Altered brain&ndash;cardiovascular relationship in depression: insights from an imaging study</li>
       </ul>
