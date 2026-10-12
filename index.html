@@ -48,6 +48,8 @@
   <style>
     .visitor-map { max-width: 420px; }
     .visitor-map img, .visitor-map canvas, .visitor-map iframe { max-width: 100%; height: auto; }
+    /* the theme shrinks any svg inside a link to 1em; the map wraps its dot layer in a link */
+    .visitor-map svg { height: 100%; }
   </style>
 </head>
 
