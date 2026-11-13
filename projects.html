@@ -28,6 +28,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./data/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
   <link rel="stylesheet" href="./data/css">
@@ -50,6 +51,17 @@
       body.sidebar-collapsed #sidebar, body.sidebar-collapsed .pheader { display: none; }
       body.sidebar-collapsed .content .wide-figure { width: calc(100vw - 13rem); max-width: 100rem; }
     }
+    /* three link boxes (with small previews) to the Huntington's brain-age platform */
+    .platform-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0.75rem 0 1.5rem; max-width: 45rem; }
+    @media (max-width: 40rem) { .platform-cards { grid-template-columns: 1fr; } }
+    .platform-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid #ddd; border-radius: 8px;
+      background: #fff; color: #333; transition: box-shadow 0.2s, transform 0.2s; }
+    .platform-card:hover, .platform-card:focus { text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      transform: translateY(-2px); }
+    .platform-card img { display: block; width: 100%; height: auto; margin: 0; border-radius: 0; border-bottom: 1px solid #eee; }
+    .platform-card .pc-title { padding: 0.6rem 0.75rem 0.15rem; font-weight: 700; font-size: 0.95rem; }
+    .platform-card .pc-title small { font-weight: 400; color: #888; }
+    .platform-card .pc-sub { padding: 0 0.75rem 0.7rem; font-size: 0.8rem; line-height: 1.35; color: #777; }
     #sidebar-toggle {
       position: fixed; top: 1rem; left: 1rem; z-index: 100;
       padding: 0.4rem 0.8rem; border: 0; border-radius: 4px; cursor: pointer;
@@ -418,8 +430,26 @@
       </ul>
       <p><b>Collaborative research with the Turner Institute for Brain and Mental Health, Monash University</b>:</p>
       <ul>
-        <li>Mapping regional brain aging in Huntington&rsquo;s disease using structural MRI and machine learning</li>
+        <li>Mapping regional brain aging in Huntington&rsquo;s disease using structural MRI and machine learning
+          [<a href="https://evan-kun.github.io/hd-platform/brain-age/" target="_blank">Interactive platform</a>]</li>
       </ul>
+      <div class="platform-cards">
+        <a class="platform-card" href="https://evan-kun.github.io/hd-platform/brain-age/#watch" target="_blank">
+          <img src="img/hd-preview-watch.jpg" alt="" loading="lazy">
+          <span class="pc-title">The paper in one minute</span>
+          <span class="pc-sub">Seven steps, from one MRI scan to where aging speeds up.</span>
+        </a>
+        <a class="platform-card" href="https://evan-kun.github.io/hd-platform/brain-age/#tool" target="_blank">
+          <img src="img/hd-preview-tool.jpg" alt="" loading="lazy">
+          <span class="pc-title">Try the model</span>
+          <span class="pc-sub">See a brain age for each region of an example person.</span>
+        </a>
+        <a class="platform-card" href="https://evan-kun.github.io/hd-platform/brain-age/#story" target="_blank">
+          <img src="img/hd-preview-story.jpg" alt="" loading="lazy">
+          <span class="pc-title">How it works <small>6 chapters</small></span>
+          <span class="pc-sub">The method, chapter by chapter, over the paper&rsquo;s figures.</span>
+        </a>
+      </div>
       <p><b>Master&rsquo;s project</b>:</p>
       <ul>
         <li>A knowledge-based system for brain tumour segmentation using only 3D FLAIR images</li>
